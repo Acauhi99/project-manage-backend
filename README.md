@@ -3,7 +3,7 @@
 Clonando o repositorio do projeto
 
 ```bash
-  git clone git@github.com:FullStack-lab/etapa01-bootcamp-Acauhi99.git
+  git clone git@github.com:Acauhi99/project-manage-backend.git
 ```
 
 Instalanda dependencias do projeto
