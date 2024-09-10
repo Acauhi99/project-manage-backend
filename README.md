@@ -9,7 +9,6 @@ Clonando o repositorio do projeto
 Instalanda dependencias do projeto
 
 ```bash
-  cd backend
   npm install
 ```
 
@@ -25,6 +24,14 @@ Subir o Container do MYSQL
 
 ```bash
   docker-compose up -d
+```
+
+Caso tenha problema com o container do MYSQL
+
+```bash
+  docker exec -it mysql_db mysql -u root -p
+  GRANT ALL PRIVILEGES ON *.* TO 'user'@'%';
+  FLUSH PRIVILEGES;
 ```
 
 Rodar as Migrations
