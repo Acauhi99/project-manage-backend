@@ -1,0 +1,36 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Projeto {
+  id          Int              @id @default(autoincrement())
+  nome        String
+  descricao   String
+  data_inicio DateTime
+  data_fim    DateTime?
+  status      String           @default("Pendente")
+  usuarios    ProjetoUsuario[]
+}
+
+model Usuario {
+  id       Int              @id @default(autoincrement())
+  nome     String
+  email    String           @unique
+  senha    String
+  papel    String
+  projetos ProjetoUsuario[]
+}
+
+model ProjetoUsuario {
+  projeto_id Int
+  usuario_id Int
+  projeto    Projeto @relation(fields: [projeto_id], references: [id])
+  usuario    Usuario @relation(fields: [usuario_id], references: [id])
+
+  @@id([projeto_id, usuario_id])
+}
