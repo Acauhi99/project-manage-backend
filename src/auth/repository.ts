@@ -1,6 +1,6 @@
 import { PrismaClient, Usuario } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import { InvalidCredentialsError, UserAlreadyExistsError } from "./authErrors";
+import { InvalidCredentialsError, UserAlreadyExistsError } from "./errors";
 
 const prisma = new PrismaClient();
 

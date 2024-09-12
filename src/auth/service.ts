@@ -1,13 +1,13 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../config";
-import { UserRegisterDto } from "../entities/user/userDto";
-import { DecodedToken, TokenResponse } from "./authDto";
+import { UserRegisterDto } from "../user/dto";
+import { DecodedToken, TokenResponse } from "./dto";
 import {
   InvalidCredentialsError,
   InvalidTokenError,
   JWTSecretNotDefinedError,
-} from "./authErrors";
-import { AuthRepository } from "./authRepository";
+} from "./errors";
+import { AuthRepository } from "./repository";
 
 export const AuthService = {
   registerUser: async (userDto: UserRegisterDto): Promise<TokenResponse> => {

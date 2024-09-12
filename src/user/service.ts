@@ -1,5 +1,5 @@
-import { UserResponseDto } from "./userDto";
-import { UserRepository } from "./userRepository";
+import { UserResponseDto } from "./dto";
+import { UserRepository } from "./repository";
 
 export const UserService = {
   listUsersInProject: async (

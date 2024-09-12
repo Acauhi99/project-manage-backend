@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { UserRegisterDto } from "../entities/user/userDto";
-import { errorHandler } from "./authErrors";
-import { AuthService } from "./authService";
+import { UserRegisterDto } from "../user/dto";
+import { errorHandler } from "./errors";
+import { AuthService } from "./service";
 
 export const AuthController = {
   registerUser: async (req: Request, res: Response) => {

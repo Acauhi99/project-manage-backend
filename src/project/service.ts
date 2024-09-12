@@ -1,9 +1,5 @@
-import {
-  ProjectDto,
-  ProjectListResponseDto,
-  ProjectResponseDto,
-} from "./projectDto";
-import { ProjectRepository } from "./projectRepository";
+import { ProjectDto, ProjectListResponseDto, ProjectResponseDto } from "./dto";
+import { ProjectRepository } from "./repository";
 
 export const ProjectService = {
   listProjects: async (

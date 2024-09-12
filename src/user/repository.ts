@@ -1,12 +1,12 @@
 import { PrismaClient } from "@prisma/client";
-import { UserResponseDto } from "./userDto";
+import { UserResponseDto } from "./dto";
 import {
   ProjectHasNoUserError,
   ProjectNotFoundError,
   UserAlreadyInProjectError,
   UserNotFoundError,
   UserNotInProjectError,
-} from "./userErrors";
+} from "./errors";
 
 const prisma = new PrismaClient();
 

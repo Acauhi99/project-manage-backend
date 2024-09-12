@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { errorHandler } from "./projectErrors";
-import { ProjectService } from "./projectService";
+import { errorHandler } from "./errors";
+import { ProjectService } from "./service";
 
 export const ProjectController = {
   listProjects: async (req: Request, res: Response) => {

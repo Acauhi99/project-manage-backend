@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { errorHandler } from "./userErrors";
-import { UserService } from "./userService";
+import { errorHandler } from "./errors";
+import { UserService } from "./service";
 
 export const UserController = {
   listUsersInProject: async (req: Request, res: Response) => {
